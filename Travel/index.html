@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GreenWay Travel — Explore & Book</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-fade">
+
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="wrap nav-row">
+      <a class="brand" href="index.html">GreenWay</a>
+      <nav class="nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="Reviews.html">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button class="btn ghost" id="openBookBtn">Book</button>
+        <button class="hamburger" id="hamburger" aria-label="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero (parallax-ish using transform on scroll) -->
+  <section id="home" class="hero">
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop" alt="ocean sky">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner wrap">
+      <h1 class="hero-title reveal">Plan less. Explore more.</h1>
+      <p class="hero-sub reveal delay">Handpicked packages — beaches, cities, mountains and airport-stopovers.</p>
+      <div class="hero-cta reveal delay-2">
+        <a class="btn primary" href="packages.html">See Packages</a>
+        <button class="btn outline" id="heroBookBtn">Request Quote</button>
+      </div>
+    </div>
+    <a class="scroll-down" href="#destinations" aria-label="scroll down">↓</a>
+  </section>
+
+  <!-- Destinations preview -->
+  <section id="destinations" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Top Destinations</h2>
+        <a class="view-more" href="destinations.html">View all →</a>
+      </div>
+
+      <div class="cards grid-preview">
+        <!-- Maldives -->
+        <article class="card reveal" data-tag="beach">
+          <img src="bg-hero.jpg" alt="Maldives">
+          <div class="card-body">
+            <h3>Maldives</h3>
+            <p>Overwater villas • Snorkeling</p>
+            <div class="meta">
+              <div class="price">₹89,999</div>
+              <button class="btn small book-btn" data-title="Maldives">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bali (new photo) -->
+        <article class="card reveal" data-tag="beach">
+          <img src="bali.jpg" alt="Bali - new photo">
+          <div class="card-body">
+            <h3>Bali</h3>
+            <p>Ubud • Rice terraces • Private transfers</p>
+            <div class="meta">
+              <div class="price">₹74,999</div>
+              <button class="btn small book-btn" data-title="Bali">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Paris -->
+        <article class="card reveal" data-tag="city">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop" alt="Paris">
+          <div class="card-body">
+            <h3>Paris</h3>
+            <p>Eiffel access • Wine tour</p>
+            <div class="meta">
+              <div class="price">₹1,19,999</div>
+              <button class="btn small book-btn" data-title="Paris">Book</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Swiss -->
+        <article class="card reveal" data-tag="mountain">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" alt="Swiss Alps">
+          <div class="card-body">
+            <h3>Swiss Alps</h3>
+            <p>Glacier express • Mountain views</p>
+            <div class="meta">
+              <div class="price">₹1,59,999</div>
+              <button class="btn small book-btn" data-title="Swiss Alps">Book</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages preview -->
+  <section id="packages" class="section alt">
+    <div class="wrap">
+      <h2 class="center">Popular Packages</h2>
+      <div class="package-grid">
+        <div class="pkg reveal">
+          <h3>Budget Explorer</h3>
+          <p class="muted">3-star hotels • Shared tours • Daily breakfast</p>
+          <div class="pkg-footer">
+            <div class="price">from ₹19,999</div>
+            <button class="btn book-btn" data-title="Budget Explorer">Book</button>
+          </div>
+        </div>
+
+        <div class="pkg reveal">
+          <h3>Comfort Plus</h3>
+          <p class="muted">4-star stays • Private transfers • Local guides</p>
+          <div class="pkg-footer">
+            <div class="price">from ₹49,999</div>
+            <button class="btn book-btn" data-title="Comfort Plus">Book</button>
+          </div>
+        </div>
+
+        <div class="pkg reveal">
+          <h3>Luxury Signature</h3>
+          <p class="muted">5-star resorts • Private tours • Concierge</p>
+          <div class="pkg-footer">
+            <div class="price">from ₹1,29,999</div>
+            <button class="btn book-btn" data-title="Luxury Signature">Book</button>
+          </div>
+        </div>
+      </div>
+      <div class="center" style="margin-top:16px">
+        <a class="btn outline" href="packages.html">Explore all packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="wrap">
+      <h2 class="center">Traveller Reviews</h2>
+      <div class="carousel">
+        <button class="carousel-btn prev" aria-label="prev">‹</button>
+        <div class="carousel-track">
+          <figure class="slide reveal">
+            <blockquote>“Perfect planning — our Bali trip was unforgettable!”</blockquote>
+            <figcaption>— Aditi & Karan</figcaption>
+          </figure>
+          <figure class="slide reveal">
+            <blockquote>“Swiss rail journey was magical.”</blockquote>
+            <figcaption>— Priya</figcaption>
+          </figure>
+          <figure class="slide reveal">
+            <blockquote>“Family-friendly service and amazing guides.”</blockquote>
+            <figcaption>— Rahul</figcaption>
+          </figure>
+        </div>
+        <button class="carousel-btn next" aria-label="next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="col">
+        <h3>GreenWay</h3>
+        <p>Curated trips, transparent pricing and friendly service — travel smarter.</p>
+      </div>
+      <div class="col">
+        <h4>Quick Links</h4>
+        <ul class="links">
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contact</h4>
+        <p>Email: hello@greenway.example</p>
+        <p>Phone: +91 90000 00000</p>
+      </div>
+      <div class="col">
+        <h4>Newsletter</h4>
+        <form id="newsForm" class="newsletter">
+          <input type="email" placeholder="Your email" required>
+          <button class="btn small" type="submit">Subscribe</button>
+          <p class="note" id="newsNote" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="wrap copyright">
+      <small>© <span id="year"></span> GreenWay Travel</small>
+    </div>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="close">×</button>
+      <h3>Request a Quote</h3>
+      <form id="bookingForm" class="form">
+        <label>Full name <input name="name" type="text" required></label>
+        <label>Email <input name="email" type="email" required></label>
+        <label>Destination
+          <select name="destination" required>
+            <option value="">Select a destination</option>
+            <option>Maldives</option><option>Bali</option><option>Paris</option>
+            <option>Swiss Alps</option><option>Tokyo</option><option>Airport Stopover</option>
+          </select>
+        </label>
+        <label>Month
+          <select name="month" required>
+            <option>September</option><option>October</option><option>November</option><option>December</option>
+          </select>
+        </label>
+        <button class="btn primary" type="submit">Send Enquiry</button>
+        <p class="form-note" id="formNote" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

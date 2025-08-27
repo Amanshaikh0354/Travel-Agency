@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Destinations — GreenWay Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-fade">
+
+  <header class="header">
+    <div class="wrap nav-row">
+      <a class="brand" href="index.html">GreenWay</a>
+      <nav class="nav" id="siteNavDest">
+        <a href="index.html">Home</a>
+        <a class="active" href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="index.html#testimonials">Reviews</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button class="btn ghost" id="openBookBtn2">Book</button>
+        <button class="hamburger" id="hamburger2" aria-label="menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero mini-hero">
+      <img class="hero-bg" src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60b?q=80&w=2000&auto=format&fit=crop" alt="destinations hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner wrap">
+        <h1 class="hero-title reveal">Destinations</h1>
+        <p class="hero-sub reveal delay">Explore our curated list of places — beaches, cities, mountains and transit-friendly stopovers.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="grid cards full-grid">
+          <!-- many destination cards -->
+          <article class="card reveal" data-tag="city"><img src="https://images.unsplash.com/photo-1543340713-0c8d6b01bb9a?q=80&w=1600&auto=format&fit=crop" alt="New York"><div class="card-body"><h3>New York</h3><p>City pass • Broadway tours</p><div class="meta"><div class="price">₹99,999</div><button class="btn small book-btn" data-title="New York">Book</button></div></div></article>
+
+          <article class="card reveal" data-tag="city"><img src="https://images.unsplash.com/photo-1549893071-4c9f64b5f4a3?q=80&w=1600&auto=format&fit=crop" alt="Tokyo"><div class="card-body"><h3>Tokyo</h3><p>Mt Fuji day trip • Metro pass</p><div class="meta"><div class="price">₹1,29,999</div><button class="btn small book-btn" data-title="Tokyo">Book</button></div></div></article>
+
+          <article class="card reveal" data-tag="city"><img src="https://images.unsplash.com/photo-1543352634-5a4f9e0b3c5b?q=80&w=1600&auto=format&fit=crop" alt="London"><div class="card-body"><h3>London</h3><p>Museums & Thames cruise</p><div class="meta"><div class="price">₹89,999</div><button class="btn small book-btn" data-title="London">Book</button></div></div></article>
+
+          <article class="card reveal" data-tag="beach"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop" alt="Maldives"><div class="card-body"><h3>Maldives</h3><p>Overwater villas & diving</p><div class="meta"><div class="price">₹89,999</div><button class="btn small book-btn" data-title="Maldives">Book</button></div></div></article>
+
+          <article class="card reveal" data-tag="beach"><img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1600&auto=format&fit=crop" alt="Goa"><div class="card-body"><h3>Goa</h3><p>Sun, sand & nightlife</p><div class="meta"><div class="price">₹24,999</div><button class="btn small book-btn" data-title="Goa">Book</button></div></div></article>
+
+          <article class="card reveal" data-tag="mountain"><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1600&auto=format&fit=crop" alt="Himalayas"><div class="card-body"><h3>Himalayas</h3><p>Trekking & spiritual trails</p><div class="meta"><div class="price">₹59,999</div><button class="btn small book-btn" data-title="Himalayas">Book</button></div></div></article>
+
+          <article class="card reveal" data-tag="mountain"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop" alt="Swiss"><div class="card-body"><h3>Swiss Alps</h3><p>Scenic rail & chalets</p><div class="meta"><div class="price">₹1,59,999</div><button class="btn small book-btn" data-title="Swiss Alps">Book</button></div></div></article>
+
+          <article class="card reveal" data-tag="airport"><img src="https://images.unsplash.com/photo-1500342868574-5fa3804e551c?q=80&w=1600&auto=format&fit=crop" alt="Airport"><div class="card-body"><h3>Airport Stopover</h3><p>Lounge, transit hotel & city short tour</p><div class="meta"><div class="price">₹19,999</div><button class="btn small book-btn" data-title="Airport Stopover">Book</button></div></div></article>
+
+          <!-- add more if you want -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt small-cta">
+      <div class="wrap center">
+        <h3>Ready to explore?</h3>
+        <p class="muted">Request a personalized quote — we’ll handle the details.</p>
+        <button class="btn primary" id="openBookBtnDest">Request Quote</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

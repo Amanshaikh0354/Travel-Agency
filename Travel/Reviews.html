@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traveller Reviews</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #fdd835;
+      animation: fadeDown 1.2s ease-in-out;
+    }
+
+    .review-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .slider {
+      width: 80%;
+      max-width: 1000px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.8s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .slide img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #fdd835;
+    }
+
+    .slide h3 {
+      font-size: 1.5rem;
+      color: #fdd835;
+      margin-bottom: 0.5rem;
+    }
+
+    .slide p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .stars {
+      margin: 1rem 0;
+      color: gold;
+      font-size: 1.2rem;
+    }
+
+    .navigation {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .nav-btn {
+      background: rgba(255,255,255,0.3);
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      color: #fff;
+      transition: 0.3s;
+    }
+    .nav-btn:hover {
+      background: #fdd835;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.5);
+      margin-top: 2rem;
+    }
+
+    /* Animations */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap nav-row">
+      <a class="brand" href="index.html">GreenWay</a>
+      <nav class="nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="Reviews.html">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button class="btn ghost" id="openBookBtn">Book</button>
+        <button class="hamburger" id="hamburger" aria-label="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <section class="review-section">
+    <div class="slider">
+      <div class="slides">
+
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Traveller 1">
+          <h3>Rohit Sharma</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>“An unforgettable experience! The beach resort was breathtaking and the travel arrangements were seamless.”</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Traveller 2">
+          <h3>Sara Khan</h3>
+          <div class="stars">⭐⭐⭐⭐</div>
+          <p>“Loved the mountain trek! The guides were professional and the scenery was magical. Highly recommended.”</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Traveller 3">
+          <h3>John Mathew</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>“The city tour was perfectly organized. Luxurious hotels, great food, and friendly staff. Worth every penny!”</p>
+        </div>
+
+      </div>
+      <div class="navigation">
+        <button class="nav-btn" id="prev">❮</button>
+        <button class="nav-btn" id="next">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Luxury Travel Co. | Designed with ❤️</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    let index = 0;
+
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % slide.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + slide.length) % slide.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    // Auto Slide
+    setInterval(() => {
+      index = (index + 1) % slide.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 6000);
+  </script>
+</body>
+</html>
